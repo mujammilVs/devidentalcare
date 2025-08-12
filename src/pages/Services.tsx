@@ -5,6 +5,8 @@ import { Search, Filter, ArrowRight, Star } from "lucide-react";
 import { services } from "../data/services";
 import { useLanguage } from "../contexts/LanguageContext";
 
+import banner from "../assets/dentalimages/equipment.jpg";
+
 const Services: React.FC = () => {
   const { t } = useLanguage();
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,9 +57,16 @@ const Services: React.FC = () => {
     <div className="min-h-screen pt-32">
       {/* Hero Section */}
 
-      <section className="py-20 bg-gradient-to-br from-aqua-600 via-aqua-500 to-aqua-700 relative overflow-hidden">
+      <section className="py-28 bg-gradient-to-br from-aqua-600 via-aqua-500 to-aqua-700 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.1%22 fill-rule=%22nonzero%22%3E%3Cpath d=%22m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+          <div
+            className="absolute inset-0  opacity-20"
+            style={{
+              backgroundImage: `url(${banner})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
@@ -252,7 +261,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-aqua-600 to-aqua-700 relative overflow-hidden">
+      {/* <section className="py-20 bg-gradient-to-r from-aqua-600 to-aqua-700 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.1%22 fill-rule=%22nonzero%22%3E%3Cpath d=%22m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
         </div>
@@ -286,6 +295,61 @@ const Services: React.FC = () => {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section> */}
+
+      <section className="py-28 bg-gradient-to-br from-aqua-600 via-aqua-500 to-aqua-700 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0  opacity-20"
+            style={{
+              backgroundImage: `url(${""})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto space-y-6 text-center"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+              Need Help Choosing the Right Service?
+            </h2>
+            <p className="text-lg sm:text-xl text-aqua-100">
+              Our dental experts are here to help you find the perfect treatment
+              for your needs
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+              <Link
+                to="/contact"
+                className="bg-gold-400 text-dark-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gold-300 transition-all duration-300 shadow-2xl transform hover:scale-105"
+              >
+                Book Free Consultation
+              </Link>
+              <a
+                href="tel:+97121234567"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-white hover:text-aqua-600 transition-all duration-300"
+              >
+                <span className="hidden sm:inline">Call +971 2 123 4567</span>
+                <span className="sm:hidden">Call Now</span>
+              </a>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Curved divider */}
+        <div className="absolute top-0 right-0 w-full">
+          <svg
+            className="w-full h-24 fill-white rotate-180"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+          </svg>
         </div>
       </section>
     </div>
