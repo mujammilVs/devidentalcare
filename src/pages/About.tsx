@@ -10,6 +10,10 @@ import {
 } from "lucide-react";
 // import { useLanguage } from "../contexts/LanguageContext";
 import banner from "../assets/dentalimages/teeth-5.jpg";
+import about1 from "../assets/about-1.png";
+import about2 from "../assets/about-2.png";
+import about3 from "../assets/about-3.png";
+import about4 from "../assets/about-4.png";
 
 const About: React.FC = () => {
   // const { t } = useLanguage();
@@ -301,6 +305,23 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* about us */}
+     <section className="p-10 sm:p-16 lg:p-20">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
+    {[about1, about2, about3, about4].map((img, idx) => (
+      <div key={idx} className="text-center">
+        <div className="p-6 border w-[120px] sm:w-[140px] md:w-[150px] mx-auto rounded-lg bg-white shadow-sm">
+          <img src={img} alt={`About item ${idx + 1}`} className="w-full h-auto" />
+        </div>
+        <h2 className="text-lg sm:text-xl mt-4 font-semibold text-gray-800">
+          Quick Examination
+        </h2>
+      </div>
+    ))}
+  </div>
+</section>
+
+
       {/* Values Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -365,7 +386,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-gradient-to-br from-cream-50 to-aqua-50">
+      {/* <section className="py-20 bg-gradient-to-br from-cream-50 to-aqua-50">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <motion.div
@@ -387,7 +408,6 @@ const About: React.FC = () => {
           </div>
 
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-aqua-200 to-aqua-400 hidden md:block" />
 
             <div className="space-y-12">
@@ -418,7 +438,6 @@ const About: React.FC = () => {
                         {milestone.description}
                       </p>
 
-                      {/* Arrow for desktop */}
                       <div
                         className={`hidden md:block absolute top-1/2 transform -translate-y-1/2 ${
                           index % 2 === 0 ? "-right-4" : "-left-4"
@@ -435,7 +454,6 @@ const About: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Timeline dot */}
                   <div className="hidden md:block w-6 h-6 bg-aqua-500 rounded-full border-4 border-white shadow-lg z-10" />
 
                   <div className="md:w-1/2" />
@@ -444,7 +462,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>  */}
 
       {/* CTA Section */}
       {/* <section className="py-20 bg-gradient-to-r from-aqua-600 to-aqua-700 relative overflow-hidden">
