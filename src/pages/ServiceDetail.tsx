@@ -9,7 +9,6 @@ import {
   Award,
   Phone,
   Calendar,
-  Star,
   ChevronDown,
   ChevronUp,
   Heart,

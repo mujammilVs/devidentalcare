@@ -2,19 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   Award,
-  Users,
-  Clock,
   Shield,
   Heart,
   Target,
   CheckCircle,
-  Star,
   Sparkles,
 } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+// import { useLanguage } from "../contexts/LanguageContext";
+import banner from "../assets/dentalimages/teeth-5.jpg";
 
 const About: React.FC = () => {
-  const { t } = useLanguage();
+  // const { t } = useLanguage();
 
   const stats = [
     { number: "15", label: "Years Experience", suffix: "+" },
@@ -77,13 +75,20 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-32">
+    <div className="min-h-screen pt-28">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-aqua-600 via-aqua-500 to-aqua-700 relative overflow-hidden">
+      <section className="py-28 bg-gradient-to-br from-aqua-600 via-aqua-500 to-aqua-700 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.1%22 fill-rule=%22nonzero%22%3E%3Cpath d=%22m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+          <div
+            className="absolute inset-0  opacity-20"
+            style={{
+              backgroundImage: `url(${banner})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
         </div>
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 text-center relative z-10 ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,7 +96,7 @@ const About: React.FC = () => {
             className="max-w-4xl mx-auto space-y-6"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              About <span className="text-gold-400">SmileCare</span>
+              About <span className="text-gold-400">Devi Dental Care</span>
             </h1>
             <p className="text-xl md:text-2xl text-aqua-100 leading-relaxed">
               Transforming smiles and changing lives with exceptional dental
@@ -113,7 +118,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -149,7 +154,7 @@ const About: React.FC = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Story Section */}
       <section className="py-20 bg-cream-50">
@@ -442,7 +447,7 @@ const About: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-aqua-600 to-aqua-700 relative overflow-hidden">
+      {/* <section className="py-20 bg-gradient-to-r from-aqua-600 to-aqua-700 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22 fill-rule=%22nonzero%22%3E%3Cpath d=%22m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-10" />
         </div>
@@ -479,6 +484,82 @@ const About: React.FC = () => {
               </motion.a>
             </div>
           </motion.div>
+        </div>
+      </section> */}
+
+      <section className="py-28 bg-gradient-to-br from-aqua-600 via-aqua-500 to-aqua-700 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0  opacity-20"
+            style={{
+              backgroundImage: `url(${""})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10 ">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto space-y-6"
+          >
+            <div className="container mx-auto px-4 text-center relative z-10">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-w-3xl mx-auto space-y-6 text-center"
+              >
+                <div className="container mx-auto px-4 text-center relative z-10">
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="max-w-3xl mx-auto space-y-6"
+                  >
+                    <h2 className="text-4xl md:text-5xl font-bold text-white">
+                      Experience the SmileCare Difference
+                    </h2>
+                    <p className="text-xl text-aqua-100">
+                      Join thousands of satisfied patients who trust us with
+                      their Devi Dental Care
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+                      <motion.a
+                        href="/contact"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-gold-400 text-dark-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gold-300 transition-all duration-300 shadow-2xl"
+                      >
+                        Schedule Consultation
+                      </motion.a>
+                      <motion.a
+                        href="tel:+97121234567"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-aqua-600 transition-all duration-300"
+                      >
+                        Call Us Today
+                      </motion.a>
+                    </div>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Curved divider */}
+        <div className="absolute top-0 right-0 w-full">
+          <svg
+            className="w-full h-24 fill-white rotate-180"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+          </svg>
         </div>
       </section>
     </div>

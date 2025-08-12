@@ -93,9 +93,8 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen pt-32">
       {/* Hero Section */}
-    
 
-  <section className="py-20 bg-gradient-to-br from-aqua-600 via-aqua-500 to-aqua-700 relative overflow-hidden">
+      <section className="py-28 bg-gradient-to-br from-aqua-600 via-aqua-500 to-aqua-700 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.1%22 fill-rule=%22nonzero%22%3E%3Cpath d=%22m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
         </div>
@@ -127,7 +126,6 @@ const Contact: React.FC = () => {
           </svg>
         </div>
       </section>
-      
 
       {/* Contact Section */}
       <section className="py-20 bg-white">
@@ -529,31 +527,16 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-2xl overflow-hidden"
+            className="rounded-3xl  overflow-hidden"
           >
-            <div className="aspect-[16/9] bg-gradient-to-br from-aqua-100 to-aqua-200 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <MapPin className="text-aqua-600 mx-auto" size={48} />
-                <h3 className="text-2xl font-bold text-dark-900">
-                  Interactive Map
-                </h3>
-                <p className="text-dark-600 max-w-md">
-                  Our clinic is conveniently located on Corniche Road in Al
-                  Markaziyah, Devi Dental Clinic. Easy parking available.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <a
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-aqua-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-aqua-700 transition-colors"
-                  >
-                    Get Directions
-                  </a>
-                  <button className="border border-aqua-600 text-aqua-600 px-6 py-3 rounded-xl font-semibold hover:bg-aqua-50 transition-colors">
-                    View in Maps
-                  </button>
-                </div>
+            <div className="  flex items-center justify-center">
+              <div className="text-center space-y-4 w-full flex items-center justify-center">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.563167218071!2d78.4473146!3d17.5159789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb902129b94f05%3A0xb2e731ea26c66458!2sDevi%20Dental%20Clinic!5e1!3m2!1sen!2sin!4v1754995427175!5m2!1sen!2sin"
+                  width="80%"
+                  height='300px'
+                  loading="lazy"
+                ></iframe>
               </div>
             </div>
           </motion.div>
@@ -561,7 +544,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Emergency Contact */}
-      <section className="py-20 bg-gradient-to-r from-red-500 to-red-600 relative overflow-hidden">
+      {/* <section className="py-20 bg-gradient-to-r from-red-500 to-red-600 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22 fill-rule=%22nonzero%22%3E%3Cpath d=%22m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-10" />
         </div>
@@ -591,6 +574,57 @@ const Contact: React.FC = () => {
               </motion.a>
             </div>
           </motion.div>
+        </div>
+      </section> */}
+
+      <section className="py-32 bg-gradient-to-br from-red-500 via-red-600 to-red-700 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0  opacity-20"
+            style={{
+              backgroundImage: `url(${""})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto space-y-6"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Dental Emergency?
+            </h2>
+            <p className="text-xl text-red-100">
+              We provide emergency Dental Care. Call us immediately for urgent
+              dental problems.
+            </p>
+            <div className="pt-6">
+              <motion.a
+                href="tel:+971501234567"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-3 bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition-all duration-300 shadow-2xl"
+              >
+                <Phone size={24} />
+                Emergency: +971 50 123 4567
+              </motion.a>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Curved divider */}
+        <div className="absolute top-0 right-0 w-full">
+          <svg
+            className="w-full h-24 fill-white rotate-180"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+          </svg>
         </div>
       </section>
     </div>

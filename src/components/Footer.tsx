@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                   DEVI
                 </div>
                 <div
-                  className="text-xs sm:text-sm text-green-700"
+                  className="text-xs sm:text-sm text-white"
                   style={{
                     fontFamily: "'Playfair Display', serif", // Elegant serif font
                     textShadow: "1px 1px 3px rgba(0,0,0,0.15)",
