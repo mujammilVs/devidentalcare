@@ -306,21 +306,29 @@ const About: React.FC = () => {
       </section>
 
       {/* about us */}
-     <section className="p-10 sm:p-16 lg:p-20">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
-    {[about1, about2, about3, about4].map((img, idx) => (
-      <div key={idx} className="text-center">
-        <div className="p-6 border w-[120px] sm:w-[140px] md:w-[150px] mx-auto rounded-lg bg-white shadow-sm">
-          <img src={img} alt={`About item ${idx + 1}`} className="w-full h-auto" />
+      <section className="p-10 sm:p-16 lg:p-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
+          {[
+            { img: about1, title: "Quick Examination" },
+            { img: about2, title: "Compassionate Care" },
+            { img: about3, title: "Pediatric Friendly" },
+            { img: about4, title: "Specialty in Minimally-Invasive Dentistry" },
+          ].map((item, idx) => (
+            <div key={idx} className="text-center uppercase">
+              <div className="p-6 border w-[120px] sm:w-[140px] md:w-[150px] mx-auto rounded-lg bg-white shadow-sm">
+                <img
+                  src={item.img}
+                  alt={`About item ${idx + 1}`}
+                  className="w-full h-auto"
+                />
+              </div>
+              <h2 className="text-lg sm:text-xl mt-4 font-semibold text-gray-800 ">
+                {item.title}
+              </h2>
+            </div>
+          ))}
         </div>
-        <h2 className="text-lg sm:text-xl mt-4 font-semibold text-gray-800">
-          Quick Examination
-        </h2>
-      </div>
-    ))}
-  </div>
-</section>
-
+      </section>
 
       {/* Values Section */}
       <section className="py-20 bg-white">
